@@ -16,10 +16,11 @@ void printCSVFile(char *fname, char *fname1, char *csvFile);
  * Location: Temple University Computer Science
  * Programmer: Alyssa Debrosse
  * Class: Introduction to C Programming 1057 Fall 2018 Section 005
- * Assignment: 8 - Bubble Sheet Grading
- * Date: October 31, 2018
+ * Assignment: 9 - Bubble CSV and Github
+ * Date: December 9, 2018
  * Version: 1
- * Description: Comparing each students answers on bubble sheet to answer key 
+ * Description: Comparing each students id number on file one to their id number on file two in order to discover full 
+ * name of student along with reported answers and grades. 
  *
  */
 
@@ -34,7 +35,7 @@ int main (){
 /*
  * Function: display_startup_banner()
  * Programmer: Alyssa Debrosse
- * Date: October 31, 2018
+ * Date: Decemeber 9, 2018
  * Inputs:none
  * Outputs:none
  * Globals:__DATE__ __TIME__
@@ -50,6 +51,18 @@ void display_startup_banner(){
 	printf("Program compiled on %s at %s\n\n", __DATE__, __TIME__);
 }
 
+/*
+ * Function: printCSV()
+ * Programmer: Alyssa Debrosse
+ * Date: Decemebr 9, 2018
+ * Inputs:char *fname, char *fname1, char *csvFile 
+ * Outputs:none 
+ * Globals:NUMBER_OF_QUESTIONS_PER_STUDENT, LIMIT_TO_READING_LINES, ERROR_CODE_IN_INPUT_SCANNING
+ * Returns:none
+ * Description: printing out CSV data to user in new file
+ *
+ */
+ 
 void printCSVFile(char *fname, char *fname1, char *csvFile){
 
 	FILE *firstFile=fopen(fname, "r");
